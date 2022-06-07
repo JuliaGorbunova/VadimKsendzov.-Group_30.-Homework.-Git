@@ -1,0 +1,79 @@
+Предусловие: создать новый репозиторий с именем HW 
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+Поочередно выполнить команды: 
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bag_Reports
+git branch SQL
+git branch Charles
+git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+git push -u --all
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+git checkout Bag_Reports
+vim bag_report.txt
+Insert
+Вводим текст: 
+Номер: 1
+Наименование: При клике на иконку Telegram на главной странице сайта не происходит переход к мессенджеру
+Окружение: Windows 10, Google Chrome
+Шаги: Находясь на главной странице сайта, кликнуть на иконку Telegram
+Ожидаемый результат: Произошел переход к мессенджеру Telegram
+Фактический результат: Переход к мессенджеру Telegram не произошел
+Escape
+:wq
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git add .
+git commit -m "New file with bag reports"
+git push
+
+5. Вмержить ветку Bag Reports в Main
+git checkout master
+git merge Bag_Reports
+
+6. Запушить main на внешний репозиторий
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout CheckLists
+vim checklist.txt
+Insert
+Вводим текст:
+Сценарии тестирования удобства использования:
+- Содержание веб-страницы верное, без грамматических и орфографических ошибок.
+- Все шрифты соответствуют требованиям.
+- Все тексты правильно выровнены.
+- Все сообщения об ошибках верные, без орфографических и грамматических ошибок, и соответствуют заголовку окна.
+- Подсказки существуют для всех полей.
+- Все поля правильно выровнены.
+- Между полями, колонками, рядами и сообщениями об ошибках оставлено достаточно свободного места.
+Escape
+:wq
+8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m "New file with checklist"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Находясь в репозитории на GitHub, перейти на ветку CheckLists, нажать кнопку Compare&Pull Requests
+Ввести в поле для названия: New file with checklist
+Нажать Create Pull Request
+На открывшейся странице нажать зеленую кнопку Merge Pull Request, далее Confirm merge
+Проверить, что в главной ветке появился файл checklist.txt
+
+10. Синхронизировать Внешнюю и Локальную ветки Main.
+git checkout master
+git fetch
+git pull

@@ -1,0 +1,311 @@
+1. Создайте текстоовый файл как в первом ДЗ по Terminal. 
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+На странице профиля нажать вкладку Repositories", далее - зеленую кнопку New
+Вводим имя репозитория: JSON, кнопку "Create repository".
+
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+git clone https://github.com/JuliaGorbunova/JSON.git
+
+ 6. Внутри локального JSON создать файл “new.json”.
+touch new.json
+
+ 7. Добавить файл под гит.
+git add .
+
+ 8. Закоммитить файл.
+git commit -m "Add new json file"
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе. Всё написать в формате JSON.
+vim new.json
+Insert
+Вводим 
+{
+        "Name":"Julia",
+        "Age":"28",
+        "Adress":"Nizhny Novgorod"
+}
+Escape
+:wq
+
+ 11. Отправить изменения на внешний репозиторий.
+git add .
+git commit -m "Modified new json file"
+git push
+
+ 12. Создать файл preferences.json
+touch preferences.json
+
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить)
+ в формате JSON.
+vim preferences.json
+Insert
+Вводим 
+{
+        "favorite film":"Gentlemen",
+        "favorite food":"chocolate",
+        "favorite country":"Russia"
+}
+Escape
+:wq
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+vim skills.json
+Insert
+Вводим 
+{
+        "1":"Terminal",
+        "2":"GIT",
+        "3":"Andriod"
+}
+Escape
+:wq
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+git add .
+git commit -m "Add two json files with preferenses and skills"
+git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+Add file -> Create new file 
+Вводим название "bug_report.json", коммит: "Add new file with bag reports", нажимаем Commit new file
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+см. пункт 16
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+Нажимаем на файл в репозитории, далее значок карандаша "Edit file", вводим:
+{
+"ID": "BR-001",
+        "Title": "Нажатие кнопки 'Перейти в каталог' на главной странице магазина Zara не перенаправляет на страницу Каталога",
+        "STR": [
+                "1. Зайти на главную страницу сайта (ссылка_на_сайт)",
+                "2. Нажать кнопку Каталог"
+        ],
+       "Actual result": "Нажатие кнопки Каталог НЕ перенаправляет на страницу Каталога",
+        "Expected result": "Нажатие кнопки Каталог перенаправляет на страницу Каталога",
+        "Severity": "Critical",
+        "Priority": "High",
+        "Status": "Open",
+        "Author": "Иван Иванов",
+   } 
+
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+В окне Commit new file ввести: "Add information about bag report in file" и нажать Commit new file
+
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+git checkout -- ./ && git pull
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+На странице профиля нажать вкладку Repositories", далее - зеленую кнопку New
+Вводим имя репозитория: XML, кнопку "Create repository".
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+cd ..
+git clone https://github.com/JuliaGorbunova/XML.git
+
+ 23. Внутри локального XML создать файл “new.xml”.
+cd XML
+touch new.xml
+
+ 24. Добавить файл под гит.
+git add .
+
+ 25. Закоммитить файл.
+git commit -m "Add new xml file"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+git push
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе. Всё написать в формате XML.
+vim new.xml
+Insert
+Вводим 
+          <name1> Julia </name>
+          <age> 28 </age>
+          <adress> Nizhny Novgorod </adress>          
+Escape
+:wq
+
+ 28. Отправить изменения на внешний репозиторий.
+git add .
+git commit -m "Modified new xml file"
+git push
+
+ 29. Создать файл preferences.xml
+touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vim preferences.json
+Insert
+Вводим 
+<favorite film> Gentlemen </favorite film>
+<favorite food> chocolate </favorite food>
+<favorite country> Russia </favorite country>   
+Escape
+:wq
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+vim skills.json
+Insert
+Вводим 
+<1> Terminal </1>
+<2> GIT </2>
+<3> Andriod </3>         
+Escape
+:wq
+
+ 32. Сделать коммит в одну строку.
+git add . && git commit -m "Add two new xml files"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+Add file -> Create new file 
+Вводим название "bug_report.xml", коммит: "Add new file with bag reports", нажимаем Commit new file
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+см. п.34
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+Нажимаем на файл в репозитории, далее значок карандаша "Edit file", вводим:
+<ID>
+  BR-001
+</ID>
+<Title>Нажатие кнопки 'Перейти в каталог' на главной странице магазина Zara не перенаправляет на страницу Каталога<Title>
+<STR>
+  1. Зайти на главную страницу сайта (ссылка_на_сайт) 2. Нажать кнопку Каталог
+</STR>
+<Actual result>
+  Нажатие кнопки Каталог НЕ перенаправляет на страницу Каталога
+ </Actual result>
+ <Expected result>
+    Нажатие кнопки Каталог перенаправляет на страницу Каталога
+ </Expected result>
+ <Severity>
+    Critical
+  </Severity>
+  <Priority>
+    High
+ </Priority>
+   <Status>
+    Open
+  </Status>
+  <Author>
+    Иван Иванов
+  </Author>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+В окне Commit new file ввести: "Add information about bag report in file" и нажать Commit new file
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+git checkout -- ./ && git pull
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+На странице профиля нажать вкладку Repositories", далее - зеленую кнопку New
+Вводим имя репозитория: TXT, кнопку "Create repository".
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+cd ..
+git clone https://github.com/JuliaGorbunova/TXT.git
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+cd XML
+touch new.txt
+
+ 4. Добавить файл под гит.
+git add .
+
+ 5. Закоммитить файл.
+git commit -m "Add new text file"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+git status
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+vim new.txt
+Insert
+Вводим текст:
+My name is Julia. I'm 28. I from Nyzhny Novgorod.        
+Escape
+:wq
+
+ 8. Отправить изменения на внешний репозиторий.
+git add .
+git commit -m "Edit text file"
+git push
+
+ 9. Создать файл preferences.txt
+touch preferences.txt
+<favorite film> Gentlemen </favorite film>
+<favorite food> chocolate </favorite food>
+<favorite country> Russia </favorite country> 
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить)
+ в формате TXT.
+vim new.txt
+Insert
+Вводим текст:
+My favourite film in Gentlemen.
+My favourite food is chocolate.
+My favorite country is Russia
+Escape
+:wq
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+vim skills.txt
+Insert
+Вводим текст:
+After completing the course, I will learn how to work with Terminal, Git and test applications on Andriod
+Escape
+:wq
+
+12. Сделать коммит в одну строку.
+git add . && git commit -m "Add two new txt files"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 14. На веб интерфейсе создать файл bug_report.txt.
+Add file -> Create new file 
+Вводим название "bug_report.txt", коммит: "Add new file with bag reports", нажимаем Commit new file
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+см.п.14
+
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+Нажимаем на файл в репозитории, далее значок карандаша "Edit file", вводим:
+Баг-репорт №0001
+Название: В поля с текстом "Введите имя", "Введите фамилию", "Введите отчество" формы "Приютить питомца?!" допустимо вводить некорректные данные
+Приоритет: Major
+Предусловие: "Открыта страница http://130.193.37.179/app/pets"
+Описание шагов: 
+1) Нажать на фотографию любого питомца без дома (например, Барона)
+2) Нажать кнопку ""Приютить""
+3) Ввести в поле с текстом ""Введите имя"" текст: ""123""
+4) Ввести в поле с текстом ""Введите фамилию текст: ""№;""
+5) Ввести в поле с текстом ""Введите отчество текст: ""90;::%№""
+6) Ввести в поле с текстом ""+7 ваш номер"" текст ""+79108822145""
+7) Ввести в поле с текстом ""your@email.com"" текст ""svy-yuliana@yandex.ru""
+8) Ввести в поле ""Комментарий"" текст ""Хочу приютить питомца""
+9) Нажать на кнопку ""Да!""
+Результат: ничего не происходит
+Ожидаемый результат: напротив полей с именем, фамилией и отчеством появляются сообщения об ошибке ""Введены некорректные личные данные""
+Окружение: Windows 10
+Google Chrome версия  98.0.4758.122
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+В окне Commit new file ввести: "Add information about bag report in file" и нажать Commit new file
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+git checkout -- ./ && git pull
